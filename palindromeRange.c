@@ -12,9 +12,17 @@ int main()
     scanf("%d", &start);
     printf("Enter The ending range: ");
     scanf("%d", &end);
-    
-    bool res = checkPalindrome(num);
-    (res) ? printf("%d is a palindrome \n", num) : printf("%d is not a palindrome \n", num);
+    if (start > end)
+    {
+        int temp = start;
+        start = end;
+        end = temp;
+    }
+    for (int i = start; i <= end; i++)
+    {
+        bool res = checkPalindrome(i);
+        (res) ? printf("%d is a palindrome \n", i) : printf("%d is not a palindrome \n", i);
+    }
 }
 
 bool checkPalindrome(int num)
