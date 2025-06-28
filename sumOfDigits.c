@@ -1,7 +1,9 @@
 #include <stdio.h>
-
+// This code was written by Agneay B Nair
+//Roll NO: CH.SC.U4CSE24102
 int main()
 {
+    printf("This code was written by Agneay B Nair\nRoll NO: CH.SC.U4CSE24102\n  ");
     int num, sum = 0, digit;
 
     printf("Enter a number: ");

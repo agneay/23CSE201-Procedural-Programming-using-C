@@ -5,6 +5,10 @@
 
 int main()
 {
+    // This program was written by Agneay B Nair
+    // Roll No: CH.SC.U4CSE24102
+    printf("This progam was written by Agneay B Nair\n Roll No: CH.SC.U4CSE24102\n");
+
     int num;
     int a = 0, b = 1, c, temp;
 

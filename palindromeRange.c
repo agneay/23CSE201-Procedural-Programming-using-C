@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
+// This code was written by Agneay B Nair
+// Roll No: CH.SC.U4CSE24102
 
 bool checkPalindrome(int num);
 
 int main()
 {
+    printf("This code was written by Agneay B Nair\n ROll No: CH.SC.U4CSE24102\n");
     int start, end;
     printf("Enter The starting range: ");
     scanf("%d", &start);

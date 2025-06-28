@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
+// This program was written by Agneay B Nair
+// Roll No: CH.SC.U4CSE24102
 
 int digitCount(int num);
 bool checkAmstrong(int num);
 
 int main()
 {
+    printf("This program was written by Agneay B Nair\n Roll No: CH.SC.U4CSE24102\n");
     int num;
     printf("Enter any number: ");
     scanf("%d", &num);
