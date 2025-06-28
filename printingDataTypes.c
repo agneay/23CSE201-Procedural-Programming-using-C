@@ -3,7 +3,13 @@
 #include<stdbool.h>
 #include<math.h>
 
+// This program was written by Agneay B Nair
+// Roll No: CH.SC.U4CSE241O2
+
 int main(){
+
+    printf("This code was written by Agneay B Nair \n Roll No: CH.SC.U4CSE24102 \n");
+
     int num = 4;
     double numd = 4.05;
     float numf = 4.05f;

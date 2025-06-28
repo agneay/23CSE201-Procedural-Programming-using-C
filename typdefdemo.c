@@ -1,4 +1,6 @@
 // program to demonstrate typedef usage in C
+// This program was written by Agneay B Nair
+// Roll No: CH.SC.U4CSE24102
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct {
@@ -15,6 +17,8 @@ typedef struct {
 } ColoredLine;
 
 int main(){
+    printf("This progam was written by Agneay B Nair\n Roll No: CH.SC.U4CSE24102\n");
+
     Point p1 = {0, 0};
     Point p2 = {10, 10};
     

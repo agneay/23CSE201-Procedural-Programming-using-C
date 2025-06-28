@@ -1,9 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// This program was written by Agneay B Nair
+// Roll No: CH.SC.U4CSE241O2
+
 // To write a program making use of auto break and continue statements
 int main() {
     int i;
+    printf("This code was written by Agneay B Nair \n Roll No: CH.SC.U4CSE24102 \n");
 
     // Using auto to declare a variable
     auto int count = 0;
