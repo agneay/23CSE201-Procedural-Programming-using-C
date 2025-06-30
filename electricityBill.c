@@ -16,6 +16,6 @@ int main(){
     scanf("%f",&costPerUnit);
 
     amt = pow(unitConsumed,costPerUnit);
-    printf("Hence the total amount to be paid is %f \n",amt);
+    printf("Hence the total amount to be paid is %f \ng",amt);
     return SUCCESS; 
 }

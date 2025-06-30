@@ -18,7 +18,5 @@ int main(){
     double dnum2 = (double) num2;
 
     printf("The converted numbers in double are: \n %lf \n %lf \n",num1,num2);
-    
-
     return SUCCESS;
 }
