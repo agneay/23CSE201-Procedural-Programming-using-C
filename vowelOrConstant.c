@@ -10,7 +10,7 @@
 
 int main(){
     char ch;
-    Type chType;
+    //Type chType;
     printf("Enter any character: ");
     scanf(" %c",&ch);
 

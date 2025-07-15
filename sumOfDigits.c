@@ -1,6 +1,6 @@
 #include <stdio.h>
 // This code was written by Agneay B Nair
-//Roll NO: CH.SC.U4CSE24102
+// Roll NO: CH.SC.U4CSE24102
 int main()
 {
     printf("This code was written by Agneay B Nair\nRoll NO: CH.SC.U4CSE24102\n  ");
@@ -8,15 +8,17 @@ int main()
 
     printf("Enter a number: ");
     scanf("%d", &num);
-
+    int count = 0;
     while (num > 0)
     {
+        count++;
         digit = num % 10; // Get the last digit
         sum += digit;     // Add digit to sum
         num = num / 10;   // Remove the last digit
     }
 
     printf("Sum of the digits is: %d\n", sum);
+    printf("The number of digits is: %d", count);
 
     return 0;
 }

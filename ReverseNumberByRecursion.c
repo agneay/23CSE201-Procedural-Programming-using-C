@@ -21,7 +21,7 @@ int revNum(int num)
 {
     int revNum = num;
     int res;
-    int temp;
+    int temp = 0;
     while (revNum != 0)
     {
         res = revNum % 10;
