@@ -13,22 +13,31 @@ int main()
 {
     // Program written by Agneay B Nair
     // Roll NO: CH.SC.U4CSE24102
-    printf("Program written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102");
+    printf("Program written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102\n");
+
     int n;
     printf("Enter the Limit for which you wish to enter numbers: ");
     scanf("%d", &n);
+
     int prime[n];
     int arr[n];
     int top = -1;
+
     for (int i = 0; i < n; i++)
     {
-        printf("Enter the %dth element: ", i);
+        printf("Enter the %dth element: ", i + 1);
         scanf("%d", arr + i);
+
         if (isPrime(arr[i]))
             prime[++top] = arr[i];
     }
-    printf("The prime Numbers are: ");
-    display(prime, top);
+
+    printf("The prime numbers are: ");
+    if (top >= 0)
+        display(prime, top + 1);
+    else
+        printf("None\n");
+
     return SUCCESS;
 }
 
@@ -36,13 +45,13 @@ bool isPrime(int n)
 {
     if (n <= 1)
         return false;
-    bool res = true;
+
     for (int i = 2; i * i <= n; i++)
     {
-        if (i % i == 0)
-            res = false;
+        if (n % i == 0)
+            return false;
     }
-    return res;
+    return true;
 }
 
 void display(int arr[], int size)

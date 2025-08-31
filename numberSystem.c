@@ -2,27 +2,28 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define SUCCESS 0
-#define FAILURE -1
-
-// Defining Function prototype
+// Function prototypes
+void convert_to_bin(int num);
 void convert_to_oct(int num);
 void convert_to_hex(int num);
-void convert_to_bin(int num);
 
 int main()
 {
+    // program was written BY Agneay B Nair
+    //  Roll No: CH.SC.U4CSE24102
+    printf("The program was written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102\n");
     bool res = true;
     do
     {
         int decimal_no;
-        printf("Enter the Decimal Number: ");
-        scanf("%d", decimal_no);
+        printf("\nEnter the Decimal Number: ");
+        scanf("%d", &decimal_no);
         printf("-----MENU-------\n");
-        printf("1.Convert to Binary\n2.Convert to Octal\n3.Convert to Hexadecimal\n4.Exit\n");
+        printf("1. Convert to Binary\n2. Convert to Octal\n3. Convert to Hexadecimal\n4. Exit\n");
         int choice = 0;
-        printf("Enter the number System to wich you want %d to be converted into: ", decimal_no);
+        printf("Enter your choice: ");
         scanf("%d", &choice);
+
         switch (choice)
         {
         case 1:
@@ -39,44 +40,74 @@ int main()
             exit(0);
             break;
         default:
-            printf("Enter a valid choice[1-4]");
+            printf("Enter a valid choice [1-4]\n");
             break;
         }
     } while (res);
 
-    return SUCCESS;
+    return 0;
 }
 
 void convert_to_bin(int num)
 {
-    int dummy = num, sum = 0;
-    while (dummy)
+    char binary[32];
+    int i = 0;
+    if (num == 0)
     {
-        int rem = dummy % 2;
-        sum = sum * 10 + rem;
-        dummy /= 2;
+        printf("Binary: 0\n");
+        return;
     }
-    printf("The binary of the number %d is %d", num, sum);
+    while (num > 0)
+    {
+        binary[i++] = (num % 2) + '0';
+        num /= 2;
+    }
+    printf("Binary: ");
+    for (int j = i - 1; j >= 0; j--)
+        printf("%c", binary[j]);
+    printf("\n");
 }
+
 void convert_to_oct(int num)
 {
-    int dummy = num, sum = 0;
-    while (dummy)
+    char octal[32];
+    int i = 0;
+    if (num == 0)
     {
-        int rem = dummy % 8;
-        sum = sum * 10 + rem;
-        dummy /= 8;
+        printf("Octal: 0\n");
+        return;
     }
-    printf("The Octal of the number %d is %d", num, sum);
+    while (num > 0)
+    {
+        octal[i++] = (num % 8) + '0';
+        num /= 8;
+    }
+    printf("Octal: ");
+    for (int j = i - 1; j >= 0; j--)
+        printf("%c", octal[j]);
+    printf("\n");
 }
+
 void convert_to_hex(int num)
 {
-    int dummy = num, sum = 0;
-    while (dummy)
+    char hex[32];
+    int i = 0;
+    if (num == 0)
     {
-        int rem = dummy % 16;
-        sum = sum * 10 + rem;
-        dummy /= 16;
+        printf("Hexadecimal: 0\n");
+        return;
     }
-    printf("The Hex of the number %d is %d", num, sum);
+    while (num > 0)
+    {
+        int rem = num % 16;
+        if (rem < 10)
+            hex[i++] = rem + '0';
+        else
+            hex[i++] = rem - 10 + 'A';
+        num /= 16;
+    }
+    printf("Hexadecimal: ");
+    for (int j = i - 1; j >= 0; j--)
+        printf("%c", hex[j]);
+    printf("\n");
 }

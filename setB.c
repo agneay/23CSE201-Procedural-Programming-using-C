@@ -21,8 +21,8 @@ int main()
     bool run = true;
     do
     {
-        printf("-------Available Menu Options-------\n");
-        printf("1. Check if Matrix is Symmetric\n2.Display the trace of a matrix(sum of diagonal Elements)\n3.Check if Matrix is a upper triangular Matrix\n4.Check if the Matrix is a Lower Triangular Matrix\n5.Check if it is an Identity Matrix\n6.Exit");
+        printf("\n-------Available Menu Options-------\n");
+        printf("1. Check if Matrix is Symmetric\n2.Display the trace of a matrix(sum of diagonal Elements)\n3.Check if Matrix is a upper triangular Matrix\n4.Check if the Matrix is a Lower Triangular Matrix\n5.Check if it is an Identity Matrix\n6.Exit\n");
         int choice;
         printf("Enter Your Choice[1-6]");
 
@@ -44,7 +44,7 @@ int main()
                 scanf("%d", &arr[i][j]);
             }
         }
-        printf("The matrix you have entered is: ");
+        printf("The matrix you have entered is: \n");
         disp(order, arr);
         switch (choice)
         {
@@ -73,15 +73,16 @@ int main()
 }
 void disp(int order, int arr[order][order])
 {
-    printf("\n|");
+
     for (int i = 0; i < order; i++)
     {
+        printf("|\t");
         for (int j = 0; j < order; j++)
         {
-            printf("%d\t", arr[order][order]);
+            printf("%d\t", arr[i][j]);
         }
+        printf("|\n");
     }
-    printf("|");
 }
 void disp_trace(int order, int arr[order][order])
 {
@@ -109,23 +110,16 @@ void check_upper(int order, int arr[order][order])
     bool res = true;
     for (int i = 0; i < order; i++)
     {
-        for (int j = 0; j < order; j++)
+        for (int j = 0; j < i; j++)
         {
-            if (i == j)
+            if (arr[i][j] != 0)
             {
-                if (!(arr[i][j] == 1))
-                    res = false;
-            }
-            else if (i < j)
-            {
-                if (!(arr[i][j] == 0))
-                {
-                    res = false;
-                }
+                res = false;
+                break;
             }
         }
     }
-    res ? printf("The matrix is a upper triangular Matrix") : printf("The matrix is NOT  a upper traingulat Matrix");
+    res ? printf("The matrix is an Upper Triangular Matrix\n") : printf("The matrix is NOT an Upper Triangular Matrix\n");
 }
 
 void check_lower(int order, int arr[order][order])
@@ -133,23 +127,16 @@ void check_lower(int order, int arr[order][order])
     bool res = true;
     for (int i = 0; i < order; i++)
     {
-        for (int j = 0; j < order; j++)
+        for (int j = i + 1; j < order; j++)
         {
-            if (i == j)
+            if (arr[i][j] != 0)
             {
-                if (!(arr[i][j] == 1))
-                    res = false;
-            }
-            else if (i > j)
-            {
-                if (!(arr[i][j] == 0))
-                {
-                    res = false;
-                }
+                res = false;
+                break;
             }
         }
     }
-    res ? printf("The matrix is a upper triangular Matrix") : printf("The matrix is NOT  a upper traingulat Matrix");
+    res ? printf("The matrix is a Lower Triangular Matrix\n") : printf("The matrix is NOT a Lower Triangular Matrix\n");
 }
 
 void check_identity(int order, int arr[order][order])

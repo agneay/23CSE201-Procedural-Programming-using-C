@@ -13,7 +13,7 @@ int main()
 {
     // Code was written by Agneay B Nair
     // Roll No: CH.SC.U4CSE24102
-    printf("Code written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102\n");
+    printf("Code written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102\n"); 
     int m, n;
     printf("Enter the number of rows for Matrix A: ");
     scanf("%d", &m);

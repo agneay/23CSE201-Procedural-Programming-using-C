@@ -12,6 +12,9 @@ void swap(int *a, int *b);
 
 int main()
 {
+    // Program Written by Agneay B Nair
+    // Roll No: CH.SC.U4CSE24102
+    printf("Program Written by Agneay B Nair\nRoll No: CH.SC.U4CSE24102S");
     int n;
     printf("Enter the number of element you want to be stored in your Array: ");
     scanf("%d", &n);
@@ -31,7 +34,16 @@ int main()
 
 int bubbleSort(int *arr, int n)
 {
-    for (int i = 0; i <)
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                swap(&arr[i], &arr[j]);
+            }
+        }
+    }
 }
 
 void disp(int arr[], int n)
@@ -41,7 +53,7 @@ void disp(int arr[], int n)
     {
         printf("%d,", arr[i]);
     }
-    printf("]");
+    printf("]\n");
 }
 
 void swap(int *a, int *b)

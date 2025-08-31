@@ -20,7 +20,7 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            printf("Enter the value of element (%d,%d): ");
+            printf("Enter the value of element (%d,%d): ", i, j);
             scanf("%d", &arr[i][j]);
         }
     }
@@ -53,15 +53,15 @@ void disp_modified(int m, int n, int arr[m][n])
         }
         printf("%d\t|\n", rowSum);
     }
+    printf("|\t");
     for (int i = 0; i < m; i++)
     {
-        printf("|\t");
         for (int j = 0; j < n; j++)
         {
-            ColSum += arr[n][m];
+            ColSum += arr[j][i];
         }
         printf("%d\t", ColSum);
         ColSum = 0;
     }
-    printf("\t|\n");
+    printf("|\n");
 }
