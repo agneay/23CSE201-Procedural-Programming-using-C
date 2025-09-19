@@ -23,6 +23,12 @@ int main()
         scanf("%d", arr + i);
     }
     int max = *arr;
-    for (int i)
-        printf("The max element present in the array has a value of %d", max);
+    for (int i; i < n; i++)
+    {
+        if (*(arr + i) > max)
+        {
+            max = *(arr + i);
+        }
+    }
+    printf("The max element present in the array has a value of %d\n", max);
 }
